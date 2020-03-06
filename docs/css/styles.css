@@ -129,7 +129,6 @@ main > section {
 .searchbarBooks:focus {
   outline: none;
 }
-
 #browsingBookList {
   list-style: none;
   display: flex;
@@ -139,6 +138,18 @@ main > section {
 }
 #browsingBookList > li {
   margin-right: 15px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  max-width: 500px;
+  height: 200px;
+}
+.container img {
+  width: auto;
+  height: 200px ;
+  margin-right: 10px;
 }
 
 /* EDITING SECTION */
