@@ -1,38 +1,221 @@
-main {
+@font-face {
+  font-family: "avenirBook";
+  src: url(fonts/avenirBook.otf);
+}
+@font-face {
+  font-family: "avenirBlack";
+  src: url(fonts/avenirBlack.otf);
+}
+@font-face {
+  font-family: "avenirRoman";
+  src: url(fonts/avenirRoman.otf);
+}
+
+/* BIG SCOPE */
+
+* {
+  font-family: avenir;
+}
+html {
+  background: url(../img/libraryWallpaper.jpg);
+  background-repeat: none;
+  background-size: contain;
+  background-attachment: fixed;
   display: grid;
-  grid-template-columns: 10% 30% 10% 40% 10%;
-  grid-template-rows: 15em 25em 10% 30em 10em;
+  grid-template-columns: 5% auto 5%;
+  grid-template-rows: 5em auto 5em;
 }
-
-#titleSection {
-  grid-column-start: 2;
-  grid-column-end: 5;
-  text-align: center;
-  grid-row: 1;
-  background-color: white;
-}
-
-#titleSection > h1 {
-  padding-bottom: 5em;
-}
-
-#browsingSection {
+body {
   grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 2;
   grid-column-end: 3;
 }
+h1,
+h2,
+a {
+  font-family: avenirBlack;
+}
+a {
+  text-decoration: none;
+  color: black;
+  margin-right: 0.5em;
+}
+a:hover {
+  color: red;
+}
+p {
+  font-size: 0.8em;
+}
+li {
+  font-size: 0.8em;
+}
+main {
+  display: grid;
+  grid-template-rows: 17em 3em 80em;
+}
+main > section {
+  padding: 2em;
+}
+#main1 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  background-color: white;
+}
+#main2 {
+  grid-row-start: 3;
+  grid-row-end: 8;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 35% 5% 60%;
+  grid-template-rows: 15em 35% 5% 23em 5em;
+}
+
+/* NAV SECTION */
+
+#navSection {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  padding-left: 0;
+  padding-top: 0;
+}
+#navSection > img {
+  max-width: 15em;
+}
+
+/* TITLE SECTION */
+
+#titleSection {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding-left: 0;
+}
+#titleSection > h1 {
+  font-size: 2em;
+  padding-top: 0;
+}
+
+/* BROWSING SECTION */
+
+#browsingSection {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-color: red;
+}
+#browsingSection > section {
+  background-color: white;
+  margin: 1em;
+  padding: 1em;
+}
+#browsingSection h2 {
+  margin-top: 0;
+}
+.searchbarBooks {
+  width: 70%;
+  margin-top: 2em;
+  border: none;
+  border-bottom: 2px solid black;
+}
+.searchbarBooks:focus {
+  outline: none;
+}
+
+#browsingBookList {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+  overflow-x: scroll;
+}
+#browsingBookList > li {
+  margin-right: 15px;
+}
+
+/* EDITING SECTION */
 
 #editingSection {
   grid-row-start: 4;
-  grid-row-end: 5;
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-row-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-color: black;
 }
+#editingSection > section {
+  background-color: white;
+  margin: 1em;
+  padding: 1em;
+}
+#textArea {
+  width: 100%;
+}
+button {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 3px;
+  transition: all 300ms;
+  width: 60px;
+}
+button:hover {
+  box-shadow: inset 75px 0px 0px 0px red !important;
+  animation: ease 300ms buttonAnimation forwards;
+}
+#listItem1,
+#listItem2,
+#listItem3 {
+  float: right;
+  margin-left: 5px;
+  display: none;
+}
+.visible {
+  display: block !important;
+}
+
+/* DOCUMENT SECTION */
 
 #docSection {
   grid-row-start: 2;
-  grid-row-end: 5;
-  grid-column-start: 4;
-  grid-column-end: 5;
+  grid-row-end: 6;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  background-color: lightgrey;
+}
+#docSection > section {
+  background-color: white;
+  margin: 1em;
+  padding: 1em;
+  text-align: left;
+}
+#docSection > section:hover {
+  border: 5px solid black;
+}
+#docSection p {
+  font-size: 1em;
+}
+#docSection h1 {
+  font-size: 2.5em;
+}
+#docSection h2 {
+  font-size: 1.2em;
+}
+
+/* kEYFRAMES */
+
+@keyframes buttonAnimation {
+  0% {
+    width: 60px;
+  }
+  100% {
+    width: 75px;
+  }
 }
