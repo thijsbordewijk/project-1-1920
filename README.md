@@ -31,3 +31,5 @@ Other ideas i would implement if i had more time
 
 - Editing the text (size, colour, boldness, italics etc.)
 
+- Adding links to the images of books to link to the page for the user to lend the book on the OBA website 
+
