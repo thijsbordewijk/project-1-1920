@@ -14,7 +14,8 @@ The API i used is the OBA API which contains information about all books availab
 
 ## Screenshot
 
-
+<img width="1440px" src="https://user-images.githubusercontent.com/43644032/76074190-4aef7c80-5f9b-11ea-9dfa-0261a72608a0.PNG">
+<img width="1440px" src="https://user-images.githubusercontent.com/43644032/76074391-92760880-5f9b-11ea-931d-c82d56f057c8.PNG">
 
 ## Other ideas 
 
